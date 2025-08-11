@@ -57,6 +57,8 @@
   color: #ffffff;
   outline: none;
   cursor: pointer;
+  width: 25%;
+  align-self: end;
 }
 
 @media screen and (max-width: 767px) {
@@ -68,5 +70,134 @@
 @media screen and (min-width: 768px) {
   .d-lg-none {
     display: none;
+  }
+}
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(2px);
+}
+
+/* Card-style popup */
+.payment-popup {
+  background: #fff;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.payment-popup h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Payment options list */
+.payment-popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Option box */
+.payment-popup div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: background 0.2s ease-in-out;
+}
+
+.payment-popup div:hover {
+  background-color: #f1f1f1;
+}
+
+/* Radio buttons */
+.payment-popup input[type='radio'] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.payment-popup input[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Labels */
+.payment-popup label {
+  font-size: 16px;
+  color: #444;
+}
+.confirm-btn {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.confirm-btn.active {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 75px;
+  margin-top: 20px;
+}
+
+.disabled-btn {
+  opacity: 0.6;
+}
+/* Success popup style */
+.success-popup {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: #28a745;
+  margin-bottom: 10px;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+.success-popup h2 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.success-popup p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
